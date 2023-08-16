@@ -1031,6 +1031,140 @@ ul {
 }
 
 /* End works  */
+/* Start LATEST EVENTS  */
+.events {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+}
+
+.events .container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.events img {
+  max-width: 450px;
+}
+
+@media(max-width:991px) {
+  .events img {
+    display: none;
+  }
+}
+
+.events .info {
+  flex: 1;
+}
+
+.events .info .time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px auto;
+}
+
+.events .time .box {
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.events .time .box span:first-child {
+  font-size: 35px;
+  font-weight: bold;
+  padding: 15px;
+  color: var(--main-color);
+}
+
+.events .time .box span:last-child {
+  font-size: 18px;
+  padding: 15px 10px;
+  color: #777;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.events .info .title {
+  text-align: center;
+  margin: 40px 0 0;
+  font-size: 35px;
+}
+
+.events .info p {
+  text-align: center;
+  line-height: 1.7;
+  font-size: 17px;
+  color: #777;
+}
+
+.events .time .box span {
+  display: block;
+  transition: var(--main-transition);
+}
+
+.events .subscribe {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.events .subscribe form {
+  width: 600px;
+  margin: 20px auto;
+  padding: 30px 40px;
+  background-color: #f6f5f5;
+  border-radius: 50px;
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 767px) {
+  .events .subscribe form {
+    max-width: 100%;
+    padding: 20px;
+    flex-direction: column;
+    border-radius: 0;
+  }
+}
+
+.events .subscribe form input[type="email"] {
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+  flex: 1;
+  caret-color: var(--main-color);
+}
+
+
+.events .subscribe form input[type="email"]:focus {
+  outline: none;
+}
+
+.events .subscribe form input[type="email"]::placeholder {
+  transition: opacity var(--main-transition);
+}
+
+.events .subscribe form input[type="email"]:focus::placeholder {
+  opacity: 0;
+}
+
+.events .subscribe form input[type="submit"] {
+  border: none;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: var(--main-color);
+  color: white;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+
+.events .subscribe form input[type="submit"]:hover {
+  background-color: var(--main-color-alt);
+}
+
+/* End LATEST EVENTS  */
 /* Start animation */
 @keyframes up-and-down {
 
