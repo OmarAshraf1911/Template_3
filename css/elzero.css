@@ -1165,6 +1165,15 @@ ul {
 }
 
 /* End LATEST EVENTS  */
+/* Start PRICING PLANS */
+.pricing .container {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  background-color: var(--section-color);
+  position: relative;
+}
+
+/* End PRICING PLANS */
 /* Start animation */
 @keyframes up-and-down {
 
