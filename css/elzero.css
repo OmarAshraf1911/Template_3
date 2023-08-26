@@ -1166,11 +1166,134 @@ ul {
 
 /* End LATEST EVENTS  */
 /* Start PRICING PLANS */
-.pricing .container {
+.pricing {
   padding-top: var(--main-padding-top);
   padding-bottom: var(--main-padding-bottom);
   background-color: var(--section-color);
   position: relative;
+}
+
+.pricing .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.pricing .box {
+  position: relative;
+  background-color: white;
+  transition: var(--main-transition);
+  text-align: center;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  z-index: 1;
+}
+
+.pricing .box::before,
+.pricing .box::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 50%;
+  background-color: #f6f6f6;
+  z-index: -1;
+  transition: var(--main-transition);
+}
+
+.pricing .box::before {
+  top: 0;
+  right: 0;
+}
+
+.pricing .box::after {
+  bottom: 0;
+  left: 0;
+}
+
+.pricing .box:hover:before,
+.pricing .box:hover:after {
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .pricing .box.popular {
+    top: -20px;
+  }
+}
+
+.pricing .box.popular .label {
+  position: absolute;
+  writing-mode: vertical-lr;
+  padding: 10px 10px 35px 10px;
+  background-color: var(--main-color);
+  color: white;
+  right: 20px;
+  width: 40px;
+}
+
+.pricing .box.popular .label::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+  border-width: 20px;
+}
+
+.pricing .container .box .title {
+  font-size: 28px;
+  font-weight: bold;
+  padding: 20px 0;
+}
+
+.pricing .container .box .price {
+  padding: 20px 0;
+}
+
+.pricing .container .box .price .amount {
+  font-size: 60px;
+  font-weight: bold;
+  color: var(--main-color);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.pricing .container .box ul {
+  text-align: left;
+}
+
+.pricing .container .box li {
+  border-top: 1px solid #eee;
+  padding: 20PX 50px;
+}
+
+.pricing .container .box li::before {
+  content: "";
+}
+
+.pricing .container .box .price .time {
+  color: #777;
+}
+
+.pricing .container .box a {
+  display: block;
+  width: fit-content;
+  margin: 40px auto;
+  border: 2px solid var(--main-color-alt);
+  padding: 15px 20px;
+  border-radius: 6px;
+  color: black;
+  font-weight: bold;
+  transition: var(--main-transition);
+}
+
+.pricing .container .box a:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.pricing .container .box img {
+  max-width: 80px;
 }
 
 /* End PRICING PLANS */
