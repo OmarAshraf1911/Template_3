@@ -1296,9 +1296,89 @@ ul {
   max-width: 80px;
 }
 
+/* End PRICING PLANS */
+/* Start videos */
+.videos {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+}
+
+.videos .holder {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: var(--section-color);
+  border: 1px solid #ddd;
+}
+
+@media(max-width:991px) {
+  .videos .holder {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.videos .holder .list {
+  min-width: 300px;
+  background-color: white;
+}
+
+.videos .holder .list .name {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 25px;
+}
+
+.videos .holder .list .name i {
+  color: var(--main-color);
+}
+
+.videos .holder .list ul li {
+  border-top: 1px solid #ddd;
+  padding: 20px;
+  line-height: 1.7;
+  transition: var(--main-transition);
+  cursor: pointer;
+}
+
+.videos .holder .list ul li:hover {
+  color: var(--main-color-alt);
+  font-size: 18px;
+  background-color: #fafafa;
+}
+
+.videos .holder .list ul li span {
+  display: block;
+  color: #777777;
+}
+
+.videos .holder .preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.videos .holder .preview img {
+  max-width: 100%;
+}
+
+.videos .holder .preview p {
+  background-color: white;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--main-color);
+  margin: 0;
+}
+
+/* End videos */
 /* Start Awesome */
 /* End Awesome */
-/* End PRICING PLANS */
+
 /* Start animation */
 @keyframes up-and-down {
 
